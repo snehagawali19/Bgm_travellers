@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #111111;
+  --navy-soft: #1a1a1a;
+  --teal: #4a9e00;
+  --teal-dark: #3d8500;
+  --cream: #f7f7f7;
+  --sand: #eeeeee;
+  --ink: #111111;
+  --gold: #73d100;
+  --gold-dark: #61b800;
+  --brand: #73d100;
+  --brand-dark: #61b800;
+  --header: #73d100;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-header: var(--header);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-oswald);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--ink);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.ticket-print {
+  break-inside: avoid;
+}
+
+.bgm-bus-marker {
+  background: transparent;
+  border: none;
+}
+
+.bgm-bus-rotator {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+}
+
+.bgm-bus-rotator span {
+  display: block;
+  width: 18px;
+  height: 28px;
+  border-radius: 9px 9px 6px 6px;
+  background: #73d100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.bgm-bus-rotator span::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  right: 3px;
+  height: 8px;
+  border-radius: 4px;
+  background: #111111;
+}
+
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Build
+.next/
+out/
+dist/
+build/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Database
+*.db
+*.sqlite
+pgdata/
+.tools/
+
+# Logs and OS
+*.log
+.DS_Store
+Thumbs.db
+coverage/
+htmlcov/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+.python-version
+# Isolated PostgreSQL test data
+.test-postgres/
